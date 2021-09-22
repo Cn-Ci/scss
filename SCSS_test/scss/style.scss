@@ -1,0 +1,11 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholder';
+
+body {
+    background-color: grey;
+}
+
+p {
+    color: $fond-success;
+}
