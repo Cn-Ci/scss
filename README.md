@@ -1,4 +1,3 @@
-<h2>INSITACTION</h2>
 <h3>Test suite entretien pour le poste de 
 développeur frontend</h3>
 
@@ -23,5 +22,3 @@ développeur frontend</h3>
 <li>Les difficultés rencontrées </li></ul>
 
 
-
-<h4>Bon courage, l’équipe INSITACTION.</h4>
