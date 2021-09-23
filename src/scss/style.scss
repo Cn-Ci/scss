@@ -1,0 +1,448 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholder';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@font-face{font-family:'AvenirNext-Regular'; src:url('../../utils/font/AvenirNext-Regular.ttf');}
+@font-face{font-family:'AvenirNext-Bold'; src:url('../../utils/font/Avenir-Next-Bold.otf');}
+@font-face{font-family:'AvenirNext-Demi-Bold'; src:url('../../utils/font/Avenir-Next-Demi-Bold.otf');}
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: $sizeText ;
+    text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width:768px) {
+        font-size: $sizeText +8 ;
+    }
+}
+
+
+// Navbar
+.navbar{
+    background-color: $colorBlack;
+    .navbar-dark .navbar-toggler{
+        border-color: transparent;
+    }
+    #colorToggler.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28222, 222, 222, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+// Police Text
+%fontBold {
+    font-family: 'AvenirNext-Bold';
+    font-size: $sizeText - 7!important;
+}
+%fontRegular {
+    font-family: 'AvenirNext-Regular';
+    font-size: $sizeText - 4;
+}
+%fontDemiBold{
+    font-family: 'AvenirNext-Demi-Bold';
+    font-size: $sizeText - 4;
+    text-transform: uppercase;
+}
+
+
+// Text on picture
+#showAccueil {
+    position: relative;
+    #imgBDessange{
+        position: relative;
+        z-index: 1;
+        height: 60%;
+        overflow: hidden;
+    }
+    #textBDessange{
+        position:absolute;
+        top: 8vw;
+        z-index: 2;
+        color: $colorWhite;
+        text-shadow: $colorBlack 1px 0 10px;
+        font-size: $sizeText - 8;
+        span {
+            @extend %fontBold;
+            @media screen and (min-width:768px) {
+                font-size: $sizeText - 7 ;
+            }
+        }
+        @media screen and (min-width:768px) {
+            font-size: $sizeText + 3 ;
+            top: 21vw!important;
+        }
+    }
+}
+
+// Text after picture
+#textInfos{
+    font-size: $sizeText - 8;
+    span {
+        @extend %fontBold;
+    }
+    @media screen and (min-width:768px) {
+        font-size: $sizeText ;
+    }
+}
+
+// Mark
+.borderMark {
+    border: 1px solid $borderMarque ;
+    min-height: 300px;
+    &:hover{
+        box-shadow: 1px 5px 7px 2px $colorBlack;
+    }
+    @media screen and (min-width:768px) {
+        min-height: 400px;
+    }
+    
+}
+
+.textInfo {
+    @extend %fontRegular;
+}
+
+// block
+%sizeHr {
+    height: 1px;
+    width: 25%;
+}
+
+%display {
+    display: flex;
+    align-items: center;
+}
+
+%textblock {
+    font-size: $sizeText;
+    text-transform: uppercase;
+    top:50%;
+}
+
+.cardAnim {
+    @extend %display;
+    @extend %fontRegular;
+    transition: all 2s;
+    vertical-align: center;
+    flex-direction: column;
+    margin: auto;
+    width: 47%;
+    height: 300px;  
+    @media screen and (min-width:980px) {
+        font-size: $sizeText + 8;
+    }
+}
+
+.rowAnimate {
+    @extend %display;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    .cardRight {
+        @include color($colorBlack, $colorLeft);
+        border:none;
+        scale: 1.04;
+        &:hover{
+            cursor: pointer;
+        }
+        #textRight {
+            @extend %textblock;
+            @media screen and (min-width:768px) {
+                font-size: $sizeText + 8;
+            }
+        }
+        .hrRight {
+            @extend %sizeHr;
+            @include color($colorBlack, $colorBlack);
+        }
+    }
+    .cardLeft {
+        @include color($colorWhite, $colorBlack);
+        scale: 1;
+        &:hover{
+            cursor: pointer;
+        }
+        #textLeft {
+            @extend %textblock;
+            @media screen and (min-width:768px) {
+                font-size: $sizeText + 8;
+            }
+        }
+        .hrLeft {
+            @extend %sizeHr;
+            @include color($colorWhite, $colorWhite);
+        }
+    }
+}
+
+// class active click
+.active {
+    .cardRight {
+        @include color($colorWhite, $colorBlack);
+        scale: 1.04;
+        hr {
+            border-color: $colorWhite;
+        }
+    }
+    .cardLeft {
+        @include color($colorBlack, $colorLeft);
+        scale: 1;
+        hr {
+            border-color: $colorBlack;
+        }
+    }
+}
+
+// News
+#textInfoNew {
+    font-size: $sizeText - 4;
+}
+
+// recruitment
+#recruitment {
+    border: 1px solid $borderMarque;
+    width: 50%;
+    margin: auto;
+}
+
+#number{
+    @extend %fontDemiBold;
+}
+
+// Contact
+#hrContact {
+    @extend %sizeHr;
+    @include color($colorBlack, $colorBlack)
+}
+
+#contact {
+    text-transform: uppercase;
+    font-size: $sizeText;
+    @media screen and (min-width:980px) {
+        font-size: $sizeText + 8;
+    }
+    span {
+        @extend %fontDemiBold;
+        text-transform: initial;
+    }
+}
+
+// Animation Text BG Dessange
+.text-focus-in {
+	-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+    }
+  
+
+// Animation BG Dessange
+.kenburns-top {
+	-webkit-animation: kenburns-top 5s ease-out both;
+	        animation: kenburns-top 5s ease-out both;
+}
+@-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.05) translateY(-10px);
+              transform: scale(1.05) translateY(-10px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.05) translateY(-10px);
+              transform: scale(1.05) translateY(-10px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+
+
+// Animation Mail 
+.heartbeat:hover {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+  
+
+// Animation telephone
+.shake-top:hover {
+-webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@-webkit-keyframes shake-top {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 0;
+              transform-origin: 50% 0;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }
+  @keyframes shake-top {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 0;
+              transform-origin: 50% 0;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }

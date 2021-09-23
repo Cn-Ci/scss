@@ -1,0 +1,8 @@
+@mixin block($hauteur) {
+    height : $hauteur;
+}
+
+@mixin color($color,$bg) {
+    color : $color;
+    background-color: $bg;
+}

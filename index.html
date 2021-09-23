@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="src/img/logoInsitaction.png"/> 
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="src/js/script.js"></script>
+    <title>Test Insitaction</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="colorToggler" class="navbar-toggler-icon"></span>
+        </button>
+        <div class="mx-auto">
+            <img src="src/img/logo.png" alt="logo dessange" width="150">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="#mark">Les Marques <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#news">L'actualités</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            </div>
+    </nav>
+        
+
+    <!-- Présentation -->
+    <div id="showAccueil">
+        <div id="imgBDessange">
+            <img class="kenburns-top img-fluid" src="src/img/bDessange.jpg" alt="Benjamin Dessange" >
+        </div>
+        
+        <div id="textBDessange" class="text-focus-in text-center mx-auto w-100">
+            <p>
+            DESSANGE INTERNATIONAL est l'unique franchiseur au monde, <br> dans le secteur de la beauté globale, à être positionné haut de gamme. <br>
+            Chaque jour, plus de 100 000 femmes franchissent la porte <br> d'un des salons de beauté du groupe.<br>
+            </p>
+            <span>Benjamin DESSANGE, Président DESSANGE INTERNATIONAL</span>           
+        </div>
+    </div>
+
+    <!-- Infos -->
+    <div id="textInfos" class="text-center my-5">
+        <p>
+            DESSANGE INTERNATIONAL est l'unique franchiseur au monde, <br> dans le secteur de la beauté globale, à être positionné haut de gamme. <br> Chaque jour, plus de 100 000 femmes franchissent la porte <br> d'un des salons de beauté du groupe.<br>
+        </p>
+        <span>Benjamin DESSANGE, Président DESSANGE INTERNATIONAL</span>        
+    </div>
+
+    <!-- Mark -->
+    <p class="title" id="mark">Les Marques</p>
+
+    <div class="row justify-content-center align-content-center no-gutters">
+        <!-- Dessange -->
+        <div class="col-11 col-md-2 borderMark mx-md-1 my-2 p-0">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="src/img/dessange.png" alt="Dessange" >
+            </div>
+            <p class="textInfo mt-5 text-center">Marque de luxe dédiée à la beauté des femmes</p>
+        </div>
+
+        <!-- Camille Albane -->
+        <div class="col-11 col-md-2 borderMark mx-md-1 my-2 p-0">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="src/img/cAlbane.png" alt="Camille Albane">
+            </div>
+            <p class="textInfo mt-5 mx-0 text-center">Marque coiffeur-coloriste-maquilleur positionnée haut de gamme</p>
+        </div>
+
+        <!-- Fantastic Sams  -->
+        <div class="col-11 col-md-2 borderMark mx-md-1 my-2 p-0">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="src/img/fantasticSams.png" alt="Fantastic Sams">
+            </div>
+            <p class="textInfo mt-5 text-center">Leader sur le marché américain de la franchise coiffure "value segment" et mutli-services.</p>
+        </div>
+
+        <!-- Coiff idis -->
+        <div class="col-11 col-md-2 borderMark mx-md-1 my-2 p-0">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="src/img/coiffidis.png" alt="Coiffidis">
+            </div>
+            <p class="textInfo mt-5 text-center">Leader de la distribution de produits et matériels pour les salons de coiffure.</p>
+        </div>
+
+        <!-- Phytodess -->
+        <div class="col-11 col-md-2 borderMark mx-md-1 my-2 p-0">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="src/img/phytodess.png" alt="Phytodess" >
+            </div>
+            <p class="textInfo mt-5 text-center">Marque responsable dont les produits allient bienfaits de la nature et expertise coiffure</p>
+        </div>
+    </div>
+
+    <div class="container p-0">
+
+        <!-- Deux block -->
+        <div class="rowAnimate active my-5 w-100">
+            <div class="cardLeft cardAnim my-3">
+                <div class="m-auto w-75 text-center">
+                    <hr class="hrLeft">
+                    <p id="textLeft">Le Luxe responsable</p>
+                    <hr class="hrLeft">
+                </div>
+            </div>
+            <div class="cardRight cardAnim my-3">
+                <div class="m-auto w-75 text-center">
+                    <hr class="hrRight">
+                    <p id="textRight">Presse</p>
+                    <hr class="hrRight">
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- News -->
+        <p class="title" id="news">L'actualités</p>
+
+        <div class="row my-5 align-items-center justify-content-center no-gutters">
+            <div  class="col-11 col-md-7 p-0 mx-auto">
+                <img class="img-fluid" src="src/img/model.png" alt="modele" >
+            </div>
+            <div class="col-11 col-md-4 mx-auto">
+                <p class="title">Collection coiffure printemps été <span class="count">2016</span></p>
+                <p class="textInfoNew text-center">
+                    D’un fond noir velouté émergent la lumière et les couleurs, symboles d’une féminité irrésistible. S’inspirant des années <span class="count">1980</span>, les lignes graphiques des accessoires et du stylisme accompagnent des leurs couleurs acidulées, tout en transparence, les tendances de la saison. Les lignes de coupes aux dégradés accentués et aux pointes effilées réveillent la lumière des visages.
+                </p>
+            </div>
+        </div>
+
+        <div id="recruitment" class="text-center my-5">
+            <img src="src/img/logo_recrutement.png" alt="recrutement" class="my-3">
+            <p class="title">Recrutement</p>
+            <p id="number"><span class="count">1357</span> postes</p>
+        </div>
+
+        <!-- Contact -->
+        <hr id="hrContact">
+        <div id="contact" class="text-center">
+            <p>
+                Dessange international
+                <br>
+                <span>39 Avenue Franklin Roosevelt 75008 PARIS</span>
+            </p>
+            <div class="row justify-content-center my-5 no-gutters">
+                <div class="col-6 text-right">
+                    <img class="heartbeat" src="src/img/logo_mail.png" alt="email" width="50">
+                </div>
+                <div class="col-6 text-left">
+                    <img class="shake-top" src="src/img/logo_tel.png" alt="telephone" width="50">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="src/js/script.js"></script>
+
+</body>
+</html>
